@@ -32,10 +32,11 @@ echo "<h3>Program 2.5</h3>";
 $gaji = 2500000;
 $pajak = 0.11;
 
-$thp = $gaji - ($gaji*$pajak);
-
+$thp = $gaji - $pajak;
+$pajak = ($gaji*$pajak);
 echo "
 Gaji Sebelum pajak : $gaji <br>
-Gaji Setelah pajak : $thp
+pajak : $pajak <br>
+Gaji Setelah pajak : $thp <br>
 "
 ?>
