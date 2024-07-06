@@ -1,3 +1,6 @@
+<h1>Pertemuan 2</h1>
+<h2>Struktur dasar PHP</h2>
+
 <?php
 $nip = "2322510009";
 $name = "hendra";
@@ -35,8 +38,27 @@ $pajak = 0.11;
 $thp = $gaji - $pajak;
 $pajak = ($gaji*$pajak);
 echo "
-Gaji Sebelum pajak : $gaji <br>
-pajak : $pajak <br>
-Gaji Setelah pajak : $thp <br>
-"
+Gaji Sebelum pajak : Rp $gaji <br>
+pajak : Rp $pajak <br>
+Gaji Setelah pajak : Rp $thp <br>
+";
+
+echo "<h3>Program 2.6</h3>";
+$a = 5;
+$b = 4;
+echo "$a == $b : ". ($a == $b);
+echo "<br>$a != $b : ". ($a != $b);
+echo "<br>$a > $b : ". ($a > $b);
+echo "<br>$a < $b : ". ($a < $b);
+echo "<br>($a == $b) && ($a > $b) : ". (($a != $b) && ($a > $b));
+echo "<br>($a == $b) || ($a > $b) : ". (($a != $b) || ($a > $b));
+
+echo "<h3>Program 2.7</h3>";
+echo "Komentar tidak akan di tampilkan, buka kode untuk melihat komentar<br>";
+// Komentar pada PHP (Komentar single line)
+# ini juga Komentar single line
+/*
+ ini komentar multi-line
+*/
+
 ?>

@@ -1,3 +1,6 @@
+<h1>Pertemuan 2</h1>
+<h2>Latihan tambahan</h2>
+
 <?php
 $nim = "232251009";
 $nama = "Hendra";
