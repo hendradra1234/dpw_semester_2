@@ -1,13 +1,25 @@
-<h1>Program 4.8</h1>
 <html>
- <head><title> LOGIN DISINI</title></head>
- <body>
- <FORM ACTION="proses/proses05.php" METHOD="POST" NAME="input">
- <h2>Login Disini…</h2> 
- User name : <input type="text" name="username"><br>
- Password : <input type="password" name="password"><br>
- <input type="submit" name="Login" value="Login"> 
- <input type="reset" name="reset" value="Reset">
- </FORM>
- </body>
+    <head>
+        <title>LOGIN DISINI</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+        <h1>Program 4.8</h1>
+        <form action="proses/proses05.php" method="POST" name="input">
+            <h2>Login Disini…</h2>
+            <div class = "form-group">
+                <label>User name</label>
+                <input type="text" name="username">
+            </div>
+            <div class = "form-group">
+                <label>Password</label>
+                <input type="password" name="password">
+            </div>
+            <button type="submit" name="Login" value="Login">Submit</button>
+            <button type="reset" name="reset" value="Reset">Reset</button>
+        </form>
+    </body>
  </html>
