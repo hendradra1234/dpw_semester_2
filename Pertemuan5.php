@@ -142,28 +142,81 @@ echo "<div style = 'background-color:$arryWarna[3]'>$arryWarna[3]</div><br>";
     echo $mode."<br>";
 ?>
 <h3>Program 5.10</h3>
-<?php 
+<?php
     $arryBuah = array("Mangga", "Apel", "Pisang", "Kedondong", "Jeruk");
     if (in_array("Kedondong", $arryBuah)) {
-       echo "Ada Buah keondondong di sini";
-       return;
+       echo "<label>Ada Buah keondondong di sini</label>";
+    } else {
+        echo "<label>Tidak ada kedondong</label>";
     }
-    echo "Tidak ada kedondong";
 ?>
 <h3>Program 5.11</h3>
-<?php 
-    
+<?php
+    function cetak_ganjil_no_return () {
+        for ($i=0; $i < 100; $i++) {
+            if ($i % 2 == 1) {
+                echo "Bilangan Ganjil: $i<br>";
+            }
+        }
+    }
+
+    cetak_ganjil_no_return();
 ?>
 <h3>Program 5.22</h3>
-<?php 
+<?php
+    function cetak_ganjil_with_parameter ($awal, $akhir) {
+        for ($i=$awal; $i<$akhir; $i++) {
+            if ($i%2 == 1) {
+                echo "$i ";
+            }
+        }
+    }
+
+    $a = 10;
+    $b = 50;
+    echo "<b>Bilangan ganjil dari $a sampai $b : </b><br>";
+    cetak_ganjil_with_parameter($a, $b);
 ?>
 <h3>Program 5.13</h3>
-<?php 
+<?php
+    function tambah_string_by_value_inside_function($str) {
+        $str = $str.", Selindung";
+        return $str;
+    }
+
+    $str = "ISB Atma Luhur";
+    echo "\$str = $str<br>";
+    echo tambah_string_by_value_inside_function($str)."<br>";
+    echo "\$str = $str<br>";
 ?>
 <h3>Program 5.14</h3>
-<?php 
+<?php
+    function tambah_string_by_reference_inside_function ($str) {
+        $str = $str . ", Selindung";
+        return $str;
+    }
+
+    $str = " ISB Atma Luhur ";
+    echo "\$str = $str<br>";
+    echo tambah_string_by_reference_inside_function ($str). "<br>";
+    echo "\$str = $str<br>"
 ?>
 <h3>Program 5.15</h3>
-<?php 
+<?php
+    function luas_lingkaran_defined_functions($jari) {
+        return 3.14 * $jari * $jari;
+    }
+
+    $arr = luas_lingkaran_defined_functions(100);
+    echo "<pre>";
+    print_r($arr);
+    echo "</pre>";
 ?>
 <h3>Program 5.16</h3>
+<?php
+    if (function_exists('exif_read_data')) {
+        echo "Fungsi exif_read_data() ada di PHP.<br />\n";
+    } else {
+        echo "Fungsi exif_read_data() tidak ada di PHP.<br />\n";
+    }
+?>
