@@ -30,6 +30,10 @@ echo "<h2><strong>Running php in date "
     <li><a href="latihan2.php">Latihan 2</a></li>
     <li><a href="pertemuan3.php">Pertemuan 3</a></li>
     <li><a href="pertemuan4.php">Pertemuan 4</a></li>
+    <li><a href="pertemuan5.php">Pertemuan 5</a></li>
+    <li><a href="pertemuan6.php">Pertemuan 6</a></li>
+    <li><a href="pertemuan7.php">Latihan Pertemuan 7</a></li>
+    <li><a href="FormTesting.php">Form Testing Exercises</a></li>
 </ul>
 </p>
 <?php
