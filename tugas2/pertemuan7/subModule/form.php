@@ -12,16 +12,16 @@
 
             <form  action="" method ="POST" name = "inputform">
                 <div class = "card-body">
+                    <label>NIM</label>
                     <div class = "form-group">
-                        <label>NIM</label>
                         <input type = "number" name = "nim"/>
                     </div>
+                    <label>Nama</label>
                     <div class = "form-group">
-                        <label>Nama</label>
                         <input type = "text" name = "name"/>
                     </div>
+                    <label>Nilai</label>
                     <div class = "form-group">
-                        <label>Nilai</label>
                         <input type = "number" name = "grades"/>
                     </div>
                     <button type = "submit" name = "submit">Submit</button>
@@ -34,6 +34,15 @@
         $name = $_POST['name'];
         $nim = $_POST['nim'];
         $nilai = $_POST['grades'];
+
+        if ($nilai < 0) {
+            echo "<p>nilai $nilai tidak valid, nilai harus di atas 0</p>";
+            return;
+        }
+        if ($nilai > 100) {
+            echo "<p>nilai $nilai tidak valid, nilai maksimal 100</p>";
+            return;
+        }
 
         echo "
         <p>
