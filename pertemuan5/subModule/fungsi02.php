@@ -1,7 +1,7 @@
 <h3>Program 5.12</h3>
 <?php
     function cetak_ganjil_with_parameter ($awal, $akhir) {
-        for ($i=$awal; $i<$akhir; $i++) {
+        for ($i=$awal; $i <= $akhir; $i++) {
             if ($i%2 == 1) {
                 echo "$i ";
             }

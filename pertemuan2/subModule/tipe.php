@@ -6,7 +6,7 @@
     $status = true;
     echo "
     NIP : $nip <br>
-    Nama : $name <br>
+    Nama : $nama <br>
     umur : $umur <br>";
 
     if ($status) {

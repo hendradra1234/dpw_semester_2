@@ -1,6 +1,6 @@
 <?php
-if (isset($_POST['Pilih'])) {
-    $film = $_POST['Kartun'];
+if (isset($_POST['pilih'])) {
+    $film = $_POST['kartun'];
     echo "Film karton favorit anda:
     <font color=blue><b>$film</b></font>
     ";

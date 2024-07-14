@@ -1,6 +1,6 @@
 <h3>Program 5.5</h3>
 <?php 
-    $arryWarna = array("Blue", "Black", "Red", "Yellow", "Green");
+    $arrWarna = array("Blue", "Black", "Red", "Yellow", "Green");
     $arrNilai = array("Jack"=>80, "Daniel"=>90, "Ana"=>75, "Budi"=> 86);
     echo "<pre>";
     print_r ($arrWarna);

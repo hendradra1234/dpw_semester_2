@@ -7,7 +7,14 @@
     }
     reset ($arrNilai);
     echo "<br>Menampilkan isi array dengan while dan list : <br>";
-    while (list ($nama, $nilai) = each($arrNilai)) {
-        echo "Nilai $nama = $nilai<br>";
+
+    // each depreciated, pakai cara lain
+
+    // while (list ($nama, $nilai) = each($arrNilai)) {
+    //     echo "Nilai $nama = $nilai<br>";
+    // }
+
+    foreach ($arrNilai as $name => $nilai) {
+        echo "Nilai $name = $nilai<br>";
     }
 ?>
