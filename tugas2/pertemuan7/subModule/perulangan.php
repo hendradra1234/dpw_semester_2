@@ -23,7 +23,7 @@
                 $nilai = $_POST['money'];
 
                 for ($i=0; $i < $nilai; $i++) { 
-                    echo "Its Money baby<br>";
+                    echo "Pangkalpinang<br>";
                 }
             }
 
