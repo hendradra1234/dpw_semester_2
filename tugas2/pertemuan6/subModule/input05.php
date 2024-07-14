@@ -10,12 +10,12 @@
         <h1>Program 4.8</h1>
         <form action="proses/proses05.php" method="POST" name="input">
             <h2>Login Disini…</h2>
+            <label>User name</label>
             <div class = "form-group">
-                <label>User name</label>
                 <input type="text" name="username">
             </div>
+            <label>Password</label>
             <div class = "form-group">
-                <label>Password</label>
                 <input type="password" name="password">
             </div>
             <button type="submit" name="Login" value="Login">Submit</button>
