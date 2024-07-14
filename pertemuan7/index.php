@@ -7,9 +7,9 @@ echo "<h2><strong>Running php in date "
 <p>
     <label>List Tugas Tertera</label>
     <ul>
-        <li><a href="percabangan.php">Latihan Percabangan</a></li>
-        <li><a href="perulangan.php">Latihan Perulanagan</a></li>
-        <li><a href="array.php">Latihan Array</a></li>
-        <li><a href="form.php">Latihan Form</a></li>
+        <li><a href="subModule/percabangan.php">Latihan Percabangan</a></li>
+        <li><a href="subModule/perulangan.php">Latihan Perulanagan</a></li>
+        <li><a href="subModule/array.php">Latihan Array</a></li>
+        <li><a href="subModule/form.php">Latihan Form</a></li>
     </ul>
 </p>
