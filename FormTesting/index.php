@@ -8,14 +8,14 @@
 </form>
 
 <?php
-if (isset($_POST['input'])) {
-   $nama = $_POST['nama'];
-   $nilai = $_POST['nilai'];
+    if (isset($_POST['input'])) {
+    $nama = $_POST['nama'];
+    $nilai = $_POST['nilai'];
 
-   if ($nilai > 60) {
-    echo "<p>Nama: $nama<br> Anda lulus, nilai anda $nilai</p>";
-    return;
-   }
-   echo "<p>Nama: $nama<br> Anda Tidak lulus, nilai anda $nilai</p>";
-}
+    if ($nilai > 60) {
+        echo "<p>Nama: $nama<br> Anda lulus, nilai anda $nilai</p>";
+        return;
+    }
+    echo "<p>Nama: $nama<br> Anda Tidak lulus, nilai anda $nilai</p>";
+    }
 ?>

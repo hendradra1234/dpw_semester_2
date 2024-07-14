@@ -25,14 +25,14 @@ echo "<h2><strong>Running php in date "
 <p>
     <label>List Tugas Tertera</label>
 <ul>
-    <li><a href="pertemuan1.php">Pertemuan 1</a></li>
-    <li><a href="pertemuan2.php">Pertemuan 2</a></li>
-    <li><a href="latihan2.php">Latihan 2</a></li>
+    <li><a href="pertemuan1/">Pertemuan 1</a></li>
+    <li><a href="pertemuan2/">Pertemuan 2</a></li>
+    <li><a href="latihan2/">Latihan 2</a></li>
     <li><a href="pertemuan3.php">Pertemuan 3</a></li>
     <li><a href="pertemuan4.php">Pertemuan 4</a></li>
     <li><a href="pertemuan5.php">Pertemuan 5</a></li>
     <li><a href="pertemuan6/">Pertemuan 6</a></li>
-    <li><a href="pertemuan7.php">Latihan Pertemuan 7</a></li>
+    <li><a href="pertemuan7/">Latihan Pertemuan 7</a></li>
     <li><a href="FormTesting.php">Form Testing Exercises</a></li>
 </ul>
 </p>
