@@ -33,7 +33,7 @@ echo "<h2><strong>Running php in date "
     <li><a href="pertemuan5.php">Pertemuan 5</a></li>
     <li><a href="pertemuan6/">Pertemuan 6</a></li>
     <li><a href="pertemuan7/">Latihan Pertemuan 7</a></li>
-    <li><a href="FormTesting.php">Form Testing Exercises</a></li>
+    <li><a href="FormTesting/">Form Testing Exercises</a></li>
 </ul>
 </p>
 <?php
