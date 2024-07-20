@@ -35,17 +35,18 @@ function textValidator($i, $prefix = "") {
             <label>List Tugas</label>
             <ul>
                 <li><a href="tugas1/">Tugas 1</a></li>
+                <li><a href="tugas2/">Tugas 2</a></li>
             </ul>
         </p>
         <?php
             $end = 5;
 
-            echo "<h3>For with if condition</h3>";
+            echo "<h5>For with if condition</h5>";
             for ($i=1; $i <= $end; $i++) {
                 textValidator($i, "For");
             }
 
-            echo "<h3>While with if condition</h3>";
+            echo "<h5>While with if condition</h5>";
             $a = 1;
             while ($a <= $end) {
                 textValidator($a, "While");
