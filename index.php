@@ -36,7 +36,7 @@ function textValidator($i, $prefix = "") {
             <ul>
                 <li><a href="tugas1/">Tugas 1</a></li>
                 <li><a href="tugas2/">Tugas 2</a></li>
-                <li><a href="dpw_hendra/">Latihan Database (XAMPP)</a></li>
+                <li><a href="dpw_hendra/login.php">Latihan Database (XAMPP)</a></li>
             </ul>
         </p>
         <?php
