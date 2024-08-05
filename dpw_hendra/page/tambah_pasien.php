@@ -52,26 +52,23 @@
 
           <br>Agama
           <select type="text" name="agama" placeholder="agama" class="form-control">
-            <option value="Islam">Islam</option>
-            <option value="Protestan">Protestan</option>
-            <option value="Katolik">Katolik</option>
-            <option value="Hindu">Hindu</option>
-            <option value="Budha">Budha</option>
-            <option value="Kongucu">Kongucu</option>
+            <?php
+              show_option($religion);
+            ?>
           </select>
 
           <br>Golongan Darah
           <select type="text" name="goldar" placeholder="goldar" class="form-control">
-            <option value="A">A</option>
-            <option value="B">B</option>
-            <option value="AB">AB</option>
-            <option value="0">0</option>
+            <?php
+              show_option($bloodType);
+            ?>
           </select>
 
           <br>Jenis Kelamin
           <select type="text" name="jenkel" placeholder="jenkel" class="form-control">
-            <option value="Laki-laki">Laki-laki</option>
-            <option value="Perempuan">Perempuan</option>
+            <?php
+              show_option($gender);
+            ?>
           </select>
 
           <br>alamat

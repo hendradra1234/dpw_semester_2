@@ -20,7 +20,7 @@
     if(isset($_GET['action'])) {
       if($_GET['action']=='hapus') {
       $kd_pasien = $_GET['kd_pasien'];
-      $sql =mysqli_query($koneksi,"delete from pasien where kd_pasien='$kd_pasien'");
+      $sql =mysqli_query($koneksi,"DELETE FROM pasien WHERE kd_pasien='$kd_pasien';");
       if($sql){
         echo '<div class="alert alert-warning alert-dismissible">Pasien Berhasil Dihapus</div>'; }
       else {

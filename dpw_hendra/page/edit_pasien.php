@@ -22,7 +22,7 @@
     if (empty($kd_pasien) || empty($nm_pasien)) {
       echo `<div class = "warning">Data Tidak Boleh Kosong</div>`;
     } else {
-      $query = `UPDATE pasien SET
+      $query = "UPDATE pasien SET
       nm_pasien = '$nm_pasien',
       tempat_lahir='$tempat_lahir',
       tgl_lahir='$tgl_lahir',
@@ -30,7 +30,7 @@
       goldar='$goldar',
       jenkel='$jenkel',
       alamat='$alamat'
-      WHERE kd_pasien='$kd_pasien'`;
+      WHERE kd_pasien='$kd_pasien'";
       $edit = mysqli_query($koneksi, $query);
       if($edit){
         echo '<div class="Success")pasien Berhasil Diedit</div>';
@@ -68,24 +68,23 @@
 
             <br>Agama
             <select type="text" name="agama" placeholder="agama" class="form-control" value="<?php echo $result['agama']; ?>">
-            <option value="Islam">Islam</option>
-            <option value="Protestan">Protestan</option>
-            <option value="Katolik">Katolik</option>
-            <option value="Hindu">Hindu</option>
-            <option value="Budha">Budha</option>
-            <option value="Kongucu">Kongucu</option>
+              <?php
+                show_option($religion);
+              ?>
             </select>
 
             <br>Golongan Darah
             <select type="text" name="goldar" placeholder="goldar" class="form-control" value="<?php echo $result['goldar']; ?>">
-            <option value="A">A</option>
-            <option value="B">B</option> <option value="AB">AB</option>
-            <option value="0">0</option>
+              <?php
+                show_option($bloodType);
+              ?>
             </select>
 
             <br>Jenis Kelamin
-            <select type="text" name="jenkel" placeholder="jenkel" class="form-control" value="<?php echo $result['jenkel']; ?>"> <option value="Laki-laki">Laki-laki</option>
-            <option value="Perempuan">Perempuan</option>
+            <select type="text" name="jenkel" placeholder="jenkel" class="form-control" value="<?php echo $result['jenkel']; ?>">
+              <?php
+                show_option($gender);
+              ?>
             </select>
             <label>Alamat</label>
             <input type="text" name="alamat" placeholder="Alamat" class="form-control" value="<?php echo $result['alamat']; ?>">
