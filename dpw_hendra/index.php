@@ -232,7 +232,11 @@ if(isset($_SESSION['username'])){
       if ($halaman=="") {
         include "page/dashboard.php";
       } elseif(!file_exists("page/$halaman.php")) {
-        echo "Halaman yang anda cari tidak di temukan";
+        if(!file_exists("$halaman.php")) {
+          echo "Halaman yang anda cari tidak di temukan";
+        } else {
+          include "$halaman.php";
+        }
       } else {
         include "page/$halaman.php";
       }

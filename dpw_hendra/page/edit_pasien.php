@@ -40,8 +40,9 @@
       }
     }
   }
-  $kd_pasien $_GET['kd_pasien'];
-  $sql =mysqli_query($koneksi,"select * from pasien where kd_pasien='$kd_pasien'"); $result = mysqli_fetch_array($sql);
+  $kd_pasien = $_GET['kd_pasien'];
+  $sql =mysqli_query($koneksi,"select * from pasien where kd_pasien='$kd_pasien'");
+  $result = mysqli_fetch_array($sql);
 ?>
 <section class="content">
   <div class="container-fluid">

@@ -10,9 +10,9 @@
 <!--Skrip Simpan Data Baru-->
 <?php
   if(isset($_POST['tambah_pasien'])) {
-    $kd_pasien $_POST['kd_pasien'];
+    $kd_pasien=$_POST['kd_pasien'];
     $nm_pasien=$_POST['nm_pasien'];
-    $tempat_lahir $_POST['tempat_lahir'];
+    $tempat_lahir=$_POST['tempat_lahir'];
     $tgl_lahir=$_POST['tgl_lahir'];
     $agama=$_POST['agama'];
     $goldar=$_POST['goldar'];
