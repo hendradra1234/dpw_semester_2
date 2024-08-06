@@ -26,12 +26,12 @@
 <body class="hold-transition login-page" style=”backgroud:green;”>
 <div class="login-box" style=”backgroud:green;”>
   <div class="login-logo" style=”backgroud:green;”>
-    <a href="index2.html"><b>DPW CRUD LOGIN</b></a>
+    <a href="index2.html"><b>DPW CRUD REGISTER</b></a>
   </div>
   <!-- /.login-logo -->
   <div class="card">
     <div class="card-body login-card-body">
-      <p class="login-box-msg">Sign in to start your session</p>
+      <p class="login-box-msg">Sign in to used your session</p>
 
       <form action="" method="post">
         <div class="input-group mb-3">
@@ -61,7 +61,7 @@
           </div> -->
           <!-- /.col -->
           <div class="col-4">
-            <button type="submit" name = "login" class="btn btn-primary btn-block">Login</button>
+            <button type="submit" name = "register" class="btn btn-primary btn-block">Register</button>
           </div>
           <!-- /.col -->
         </div>
@@ -82,7 +82,7 @@
         <a href="forgot-password.html">I forgot my password</a>
       </p> -->
       <p class="mb-0">
-        <a href="register.php" class="text-center">Register a new membership</a>
+        <a href="register.html" class="text-center">Register a new membership</a>
       </p>
     </div>
     <!-- /.login-card-body -->
@@ -102,17 +102,20 @@
 
 
 <?php
-  if (isset($_POST['login']) == 'LOGIN')
+  if (isset($_POST['register']) == 'REGISTER')
   {
       $username = $_POST['username'];
       $password = sha1($_POST['password']);
+      $level = 'user';
       // $remember = $_POST['remember'];
       if(empty($username) || empty($password)) {
           echo "<script>alert('Username / Password Tidak Boleh Kosong')</script>";
           echo "<meta http-equiv='refresh' content='0 url = login.php'>";
 
       } else {
-          $query = "SELECT * FROM users WHERE username='$username' and password='$password'";
+          $query = "INSERT INTO users (
+          username, password, level)
+          VALUES ('$username', '$password', '$level')";
           $sql = mysqli_query($koneksi, $query);
 
            if (!$sql) {
@@ -120,23 +123,9 @@
             echo "<script>alert('Error: $errMessage')</script>";
             echo "<meta http-equiv='refresh' content='0 url=login.php'>";
           } else {
-            $user = mysqli_fetch_array($sql);
-            if ($user[1]) {
-              // if ($remember) {
-              //   $hour = time() + 3600 * 24 * 30;
-  
-              // }
-              // $hour = time() + 3600 * 24 * 30;
-
-                $_SESSION['level'] = 'admin';
-                $_SESSION['username'] = $username;
-              // echo "<script>alert('Anda berhasil login!');window.location='index.php'</script>";
-              echo "<script>window.location='index.php'</script>";
-            } else {
-              echo "<script>alert('Anda Gagal login! $user')</script>";
-              echo "<meta http-equiv='refresh' content='0 url=login.php'>";
-            }
-        }
+            echo '<div class="alert alert-success alert-dismissible">Register Sukses</div>';
+            echo "<script>window.location='login.php'</script>";
+          }
       }
   }
 ?>

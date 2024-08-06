@@ -6,7 +6,7 @@
           <h3><i class="fa fa-user"></i> Data Obat
             <div class="btn btn-outline-success mr-2" style="float: right; clear: both;">
               <div style="float: right;clear: both;">
-                <a href="../index.php?page=tambah_obat" class="btn-sm btn-primary"> <i class="fa fa-plus"></i> TAMBAH</a>
+                <a href="index.php?page=tambah_obat" class="btn-sm btn-primary"> <i class="fa fa-plus"></i> TAMBAH</a>
               </div>
             </div>
           </h3>
@@ -16,7 +16,7 @@
   </div>
 </section>
 <?php
-  include "../config/koneksi.php";
+  include "config/koneksi.php";
     if(isset($_GET['action'])) {
       if($_GET['action']=='hapus') {
       $kd_obat = $_GET['kd_obat'];
@@ -62,9 +62,9 @@
                   <td>'.$result['jenis_obat'].'</td>
                   <td>'.$result['stok'].'</td>
                   <td align="left">
-                  <a href="../index.php?page=edit_obat&kd_obat=' . $result['kd_obat'].'"
+                  <a href="index.php?page=edit_obat&kd_obat=' . $result['kd_obat'].'"
                   class="badge badge-primary">EDIT</a>
-                  <a href="../index.php?page=obat&action=hapus&kd_obat='.$result['kd_obat'].'"
+                  <a href="index.php?page=obat&action=hapus&kd_obat='.$result['kd_obat'].'"
                   class="badge badge-danger">HAPUS</a>
                   </td></tr>';
                   $no++;

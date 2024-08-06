@@ -196,13 +196,13 @@ if(isset($_SESSION['username'])){
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="page/pasien.php" class="nav-link active">
+                <a href="index.php?page=pasien" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Pasien</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="page/obat.php" class="nav-link">
+                <a href="index.php?page=obat" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Obat</p>
                 </a>
@@ -210,7 +210,7 @@ if(isset($_SESSION['username'])){
             </ul>
           </li>
           <li class="nav-item">
-            <a href="page/logout.php" class="nav-link">
+            <a href="index.php?page=logout" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Logout
@@ -239,6 +239,7 @@ if(isset($_SESSION['username'])){
       } elseif(!file_exists("page/$halaman.php")) {
         if(!file_exists("$halaman.php")) {
           echo "Halaman yang anda cari tidak di temukan";
+          return "index.php";
         } else {
           include "$halaman.php";
         }

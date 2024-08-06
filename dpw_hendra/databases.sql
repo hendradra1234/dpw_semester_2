@@ -1,12 +1,12 @@
 CREATE TABLE users(
-  Id Integer(3) Primary Key,
+  Id Integer(3) AUTO_INCREMENT UNIQUE Primary Key,
   username Varchar(50),
   password Varchar(100),
   level Varchar(20)
 );
 
 CREATE TABLE pasien(
-  kd_pasien Integer(5) Primary Key,
+  kd_pasien Integer(5) AUTO_INCREMENT UNIQUE Primary Key,
   nm_pasien Varchar(50),
   tempat_lahir Varchar(50),
   tgl_lahir DATE,
@@ -17,7 +17,7 @@ CREATE TABLE pasien(
 );
 
 CREATE TABLE obat(
-  kd_obat Integer(5) Primary Key,
+  kd_obat Integer(5) AUTO_INCREMENT UNIQUE Primary Key,
   nm_obat Varchar(50),
   satuan Varchar(20),
   jenis_obat Varchar(25),
