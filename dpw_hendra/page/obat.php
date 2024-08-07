@@ -22,9 +22,9 @@
       $kd_obat = $_GET['kd_obat'];
       $sql =mysqli_query($koneksi,"DELETE FROM obat WHERE kd_obat='$kd_obat';");
       if($sql){
-        echo '<div class="alert alert-warning alert-dismissible">obat Berhasil Dihapus</div>'; }
+        echo '<div class="alert alert-warning alert-dismissible">Obat Berhasil Dihapus</div>'; }
       else {
-        echo '<div class="error">obat Gagal Dihapus</div>';
+        echo '<div class="error">Obat Gagal Dihapus</div>';
       }
     }
   }

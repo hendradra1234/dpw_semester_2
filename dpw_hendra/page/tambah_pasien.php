@@ -10,7 +10,6 @@
 <!--Skrip Simpan Data Baru-->
 <?php
   if(isset($_POST['tambah_pasien'])) {
-    $kd_pasien=$_POST['kd_pasien'];
     $nm_pasien=$_POST['nm_pasien'];
     $tempat_lahir=$_POST['tempat_lahir'];
     $tgl_lahir=$_POST['tgl_lahir'];
@@ -18,12 +17,12 @@
     $goldar=$_POST['goldar'];
     $jenkel=$_POST['jenkel'];
     $alamat=$_POST['alamat'];
-    if(empty($kd_pasien)){
+    if(empty($nm_pasien)){
       echo '<div class="warning">Data pasien Tidak Boleh Kosong</div>';
     }else{
       $insert=mysqli_query($koneksi, "insert into pasien (
-      kd_pasien,nm_pasien, tempat_lahir,tgl_lahir, agama, goldar, jenkel, alamat)
-      values ('$kd_pasien', '$nm_pasien', '$tempat_lahir', '$tgl_lahir', '$agama', '$goldar', '$jenkel', '$alamat') ");
+      nm_pasien, tempat_lahir,tgl_lahir, agama, goldar, jenkel, alamat)
+      values ('$nm_pasien', '$tempat_lahir', '$tgl_lahir', '$agama', '$goldar', '$jenkel', '$alamat') ");
     if($insert){
       echo '<div class="alert alert-success alert-dismissible">Berhasil DiSimpan</div>';
       echo "<meta http-equiv='refresh' content='0 url=index.php?page=pasien'>";
@@ -40,41 +39,80 @@
     <div class="card">
       <div class="card-body p-2">
         <form method="post" action="">
+          <div class = "form-group">
+            <!-- <label>Kode Pasien</label>
+            </div>
+            <div class = "form-group">
+              <input type="text" name="kd_pasien" placeholder="kd_pasien" class="form-control">
+            </div> -->
 
-          <br>kd_pasien
-          <input type="text" name="kd_pasien" placeholder="kd_pasien" class="form-control">
-          <br>Nama pasien
-          <input type="text" name="nm_pasien" placeholder="Nama pasien" class="form-control">
-          <br>tempat_lahir
-          <input type="text" name="tempat_lahir" placeholder="Tempat Lahir" class="form-control">
-          <br>Tanggal Lahir
-          <input type="date" name="tgl_lahir" placeholder="Tanggal Lahir" class="form-control">
+            <div class = "form-group">
+              <label>Nama Pasien</label>
+            </div>
+            <div class = "form-group">
+              <input type="text" name="nm_pasien" placeholder="Nama pasien" class="form-control">
+            </div>
 
-          <br>Agama
-          <select type="text" name="agama" placeholder="agama" class="form-control">
-            <?php
-              show_option($religion);
-            ?>
-          </select>
+            <div class = "form-group">
+              <label>Tempat Lahir</label>
+            </div>
+            <div class = "form-group">
+              <input type="text" name="tempat_lahir" placeholder="Tempat Lahir" class="form-control">
+            </div>
 
-          <br>Golongan Darah
-          <select type="text" name="goldar" placeholder="goldar" class="form-control">
-            <?php
-              show_option($bloodType);
-            ?>
-          </select>
 
-          <br>Jenis Kelamin
-          <select type="text" name="jenkel" placeholder="jenkel" class="form-control">
-            <?php
-              show_option($gender);
-            ?>
-          </select>
+            <div class = "form-group">
+              <label>Tanggal Lahir</label>
+            </div>
+            <div class = "form-group">
+              <input type="date" name="tgl_lahir" placeholder="Tanggal Lahir" class="form-control">
+            </div>
 
-          <br>alamat
-          <input type="text" name="alamat" placeholder="alamat" class="form-control">
+            <div class = "form-group">
+              <label>Agama</label>
+            </div>
+            <div class = "form-group">
+              <select type="text" name="agama" placeholder="agama" class="form-control">
+                <?php
+                  show_option($religion);
+                ?>
+              </select>
+            </div>
 
-          <input type="submit" name="tambah_pasien" value="SIMPAN" class="submit_btn btn-md btn-success"> </form>
+            <div class = "form-group">
+              <label>Golongan Darah</label>
+            </div>
+
+            <div class = "form-group">
+              <select type="text" name="goldar" placeholder="goldar" class="form-control">
+                <?php
+                  show_option($bloodType);
+                ?>
+              </select>
+            </div>
+
+            <div class = "form-group">
+              <label>Jenis Kelamin</label>
+            </div>
+            <div class = "form-group">
+              <select type="text" name="jenkel" placeholder="jenkel" class="form-control">
+                <?php
+                  show_option($gender);
+                ?>
+              </select>
+            </div>
+
+            <div class = "form-group">
+              <label>Alamat</label>
+            </div>
+            <div class = "form-group">
+              <input type="text" name="alamat" placeholder="alamat" class="form-control">
+            </div>
+
+            <div class = "form-group">
+              <input type="submit" name="tambah_pasien" value="SIMPAN" class="submit_btn btn-md btn-success">
+            </div>
+        </form>
       </div>
     </div>
   </div>

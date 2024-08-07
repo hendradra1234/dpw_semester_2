@@ -31,7 +31,7 @@
   <!-- /.login-logo -->
   <div class="card">
     <div class="card-body login-card-body">
-      <p class="login-box-msg">Sign in to used your session</p>
+      <p class="login-box-msg">To Used this Service, you must have account first</p>
 
       <form action="" method="post">
         <div class="input-group mb-3">
@@ -51,38 +51,16 @@
           </div>
         </div>
         <div class="row">
-          <!-- <div class="col-8">
-            <div class="icheck-primary">
-              <input type="checkbox" id="remember" name = "remember">
-              <label for="remember">
-                Remember Me
-              </label>
-            </div>
-          </div> -->
-          <!-- /.col -->
+
           <div class="col-4">
             <button type="submit" name = "register" class="btn btn-primary btn-block">Register</button>
           </div>
           <!-- /.col -->
         </div>
       </form>
-<!-- 
-      <div class="social-auth-links text-center mb-3">
-        <p>- OR -</p>
-        <a href="#" class="btn btn-block btn-primary">
-          <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
-        </a>
-        <a href="#" class="btn btn-block btn-danger">
-          <i class="fab fa-google-plus mr-2"></i> Sign in using Google+
-        </a>
-      </div> -->
-      <!-- /.social-auth-links -->
 
-      <!-- <p class="mb-1">
-        <a href="forgot-password.html">I forgot my password</a>
-      </p> -->
       <p class="mb-0">
-        <a href="register.html" class="text-center">Register a new membership</a>
+        <a href="login.php" class="text-center">Already have account? login</a>
       </p>
     </div>
     <!-- /.login-card-body -->
@@ -110,7 +88,7 @@
       // $remember = $_POST['remember'];
       if(empty($username) || empty($password)) {
           echo "<script>alert('Username / Password Tidak Boleh Kosong')</script>";
-          echo "<meta http-equiv='refresh' content='0 url = login.php'>";
+          echo "<meta http-equiv='refresh' content='0 url = register.php'>";
 
       } else {
           $query = "INSERT INTO users (
@@ -121,7 +99,7 @@
            if (!$sql) {
             $errMessage = mysqli_error($koneksi);
             echo "<script>alert('Error: $errMessage')</script>";
-            echo "<meta http-equiv='refresh' content='0 url=login.php'>";
+            echo "<meta http-equiv='refresh' content='0 url=register.php'>";
           } else {
             echo '<div class="alert alert-success alert-dismissible">Register Sukses</div>';
             echo "<script>window.location='login.php'</script>";

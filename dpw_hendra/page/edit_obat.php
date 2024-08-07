@@ -9,8 +9,11 @@
 </section>
 
 <?php
+  $kd_obat = $_GET['kd_obat'];
+  $sql =mysqli_query($koneksi,"SELECT * FROM obat WHERE kd_obat='$kd_obat'");
+  $result = mysqli_fetch_array($sql);
+
   if (isset($_POST['edit_obat'])) {
-    $kd_obat = $_POST['kd_obat'];
     $nm_obat=$_POST['nm_obat'];
     $satuan=$_POST['satuan'];
     $jenis_obat=$_POST['jenis_obat'];
@@ -34,9 +37,6 @@
       }
     }
   }
-  $kd_obat = $_GET['kd_obat'];
-  $sql =mysqli_query($koneksi,"SELECT * FROM obat WHERE kd_obat='$kd_obat'");
-  $result = mysqli_fetch_array($sql);
 ?>
 <section class="content">
   <div class="container-fluid">
@@ -44,33 +44,55 @@
       <div class="card-body p-2">
         <form method="post" action="">
           <fieldset style="border:1px solid orange;">
-            <br>Kode Obat
-            <input type="text" name="kd_obat" placeholder="kd_obat" class="form-control" 
-              value="<?php echo $result['kd_obat']; ?>">
-            <br>Nama Obat
+            <div class = "form-group">
+              <label>Kode Obat</label>
+            </div>
+            <div class = "form-group">
+              <input disabled type="text" name="kd_obat" placeholder="kd_obat" class="form-control" 
+                value="<?php echo $result['kd_obat']; ?>">
+            </div>
+            <div class = "form-group">
+              <label>Nama Obat</label>
+            </div>
+            <div class = "form-group">
             <input type="text" name="nm_obat" placeholder="Nama obat" class="form-control" 
-              value="<?php echo $result['nm_obat']; ?>">
-            <br>Satuan
-            <select type="text" name="satuan" placeholder="Satuan" class="form-control" 
-              value="<?php echo $result['satuan']; ?>">
-              <?php
-                show_option($satuan);
-              ?>
-            </select>
+                value="<?php echo $result['nm_obat']; ?>">
+            </div>
+            <div class = "form-group">
+              <label>Satuan</label>
+            </div>
+            <div class = "form-group">
+              <select type="text" name="satuan" placeholder="Satuan" class="form-control" 
+                value="<?php echo $result['satuan']; ?>">
+                <?php
+                  show_option($satuan);
+                ?>
+              </select>
+            </div>
 
-            <br>Jenis Obat
-            <select type="text" name="jenis_obat" placeholder="Jenis Obat" class="form-control" 
-              value="<?php echo $result['jenis_obat']; ?>">
-              <?php
-                show_option($jenisObat);
-              ?>
-            </select>
+            <div class = "form-group">
+              <label>Jenis Obat</label>
+            </div>
+            <div class = "form-group">
+              <select type="text" name="jenis_obat" placeholder="Jenis Obat" class="form-control" 
+                value="<?php echo $result['jenis_obat']; ?>">
+                <?php
+                  show_option($jenisObat);
+                ?>
+              </select>
+            </div>
+            <div class = "form-group">
+              <label>Stok</label>
+            </div>
+            <div class = "form-group">
+              <input type="number" name="stok" placeholder="Stok" class="form-control" 
+                value="<?php echo $result['stok']; ?>">
+              <br>
+            </div>
 
-            <br>Stok
-            <input type="number" name="stok" placeholder="Stok" class="form-control" 
-              value="<?php echo $result['stok']; ?>">
-            <br>
-            <input type="submit" name="edit_obat" value="EDIT" class="submit btn btn-md btn-success">
+            <div class = "form-group">
+              <input type="submit" name="edit_obat" value="EDIT" class="submit btn btn-md btn-success">
+            </div>
           </fieldset>
         </form>
       </div>
