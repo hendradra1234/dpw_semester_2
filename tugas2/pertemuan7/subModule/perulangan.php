@@ -22,7 +22,7 @@
             if (isset($_POST['submit-normal'])) {
                 $nilai = $_POST['money'];
 
-                for ($i=0; $i < $nilai; $i++) { 
+                for ($i=0; $i < $nilai; $i++) {
                     echo "Pangkalpinang<br>";
                 }
             }
